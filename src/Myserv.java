@@ -18,11 +18,10 @@ public class Myserv extends HttpServlet
 	protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	resp.setContentType("text/html");
 PrintWriter p	=resp.getWriter();	
-p.print("welcome <h1>narayan </h1>  " );
 
-String fn=req.getParameter("first name");
-String ln=req.getParameter("last name");
-String cn=req.getParameter("Number");
+String fn=req.getParameter("first_name");
+String ln=req.getParameter("last_name");
+String cn=req.getParameter("number");
 
 p.print("Name :"+fn+"<br>");
 p.print(" sir Name : "+ln+"<br>");
@@ -46,16 +45,6 @@ try {
 	 if(a>0){
 		 System.out.println("data inserted");
 	 }
-
-ResultSet rs=null;
-	  stmt=con.prepareStatement("Select * from serv.ser");
-	 rs=stmt.executeQuery();
-	 
-
-	 while(rs.next()) {
-			p.print( "name :"+ rs.getString(1)+ "     "+"Address :"+rs.getString(2)+"   "+"Contact No. :"+rs.getString(3)+"<br>");
-		}
-
 
 
 	 

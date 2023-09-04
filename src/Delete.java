@@ -24,7 +24,7 @@ public class Delete  extends HttpServlet
 		PrintWriter p	=resp.getWriter();	
 		p.print("welcome <h1>Delete</h1>  " );
 
-		String dd=req.getParameter("deletename");
+		String dd=req.getParameter("delete_name");
 	
 
 		p.print("Name :"+dd+"<br>");

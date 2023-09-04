@@ -1,49 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Form Example</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  #container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+
+  form h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+</style>
 </head>
 <body>
-<form action="test" >
-first name <input type="text" name="first name"><br>
-Last  name <input type="text" name="last name"><br>
-Contact no. <input type="number" name="Number"><br>
+<div id="container">
+  <form action="test">
+    <h1>Insert Data</h1>
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="first_name"><br>
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="last_name"><br>
+    <label for="contactNo">Contact No.</label>
+    <input type="number" id="contactNo" name="number"><br>
+    <input type="submit" value="Click me">
+  </form>
 
+  <form action="Show">
+    <h1>Show Data</h1>
+    <input type="submit" value="Show data">
+  </form>
 
-<input type="submit" value ="Click me">
+  <form action="search">
+    <h1>Search Data</h1>
+    <label for="searchName">Search Name</label>
+    <input type="text"  name="searchname"><br>
+    <input type="submit" value="Search me">
+  </form>
 
-</form>
+  <form action="delete">
+    <h1>Delete Data</h1>
+    <label for="deleteName">Delete Name</label>
+    <input type="text" id="deleteName" name="delete_name"><br>
+    <input type="submit" value="Click me">
+  </form>
 
-
-<form action="search" >
-<h1>Search Dataa</h1>
- Search name <input type="text" name="searchname"><br>
-
-<input type="submit" value ="Click me">
-
-</form>
-
-
-<form action="delete" >
-<h1>Detete Dataa</h1>
- Delete name <input type="text" name="deletename"><br>
-
-<input type="submit" value ="Click me">
-
-</form>
-
-<form action="updat" >
-<h1>Update data</h1>
-first name <input type="text" name="first name"><br>
-Last  name <input type="text" name="last name"><br>
-Contact no. <input type="number" name="Number"><br>
-
-
-<input type="submit" value ="Click me">
-
-</form>
-
-
+  <form action="updat">
+    <h1>Update Data</h1>
+    <label for="updateFirstName">First Name</label>
+    <input type="text" id="updateFirstName" name="update_first_name"><br>
+    <label for="updateLastName">Last Name</label>
+    <input type="text" id="updateLastName" name="update_last_name"><br>
+    <label for="updateContactNo">Contact No.</label>
+    <input type="number" id="updateContactNo" name="update_number"><br>
+    <input type="submit" value="Click me">
+  </form>
+</div>
 </body>
 </html>

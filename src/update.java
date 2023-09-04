@@ -21,9 +21,9 @@ public class update extends HttpServlet
 		PrintWriter p=resp.getWriter();
 		p.print("Welcome to about");
 p.print("<br>");
-String fn=req.getParameter("first name");
-String ln=req.getParameter("last name");
-String cn=req.getParameter("Number");
+String fn=req.getParameter("update_first_name");
+String ln=req.getParameter("update_last_name");
+String cn=req.getParameter("update_number");
 
 p.print("Name :"+fn+"<br>");
 p.print("last Name : "+ln+"<br>");
